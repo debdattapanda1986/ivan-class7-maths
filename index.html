@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CBSE Class 7 Mathematics CBT</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="app">
+<header><div><h1>CBSE Class 7 Mathematics</h1><p>Half-Yearly Practice CBT • 60 Marks</p></div><div id="timer">30:00</div></header>
+<section id="start" class="card">
+<h2>Choose Question Set</h2>
+<div class="sets"><button data-set="A">Set A</button><button data-set="B">Set B</button><button data-set="C">Set C</button></div>
+<p class="note">Each set is a separate 60-mark paper based on the school syllabus in the uploaded half-yearly document.</p>
+<label>Student Name <input id="name"></label><label>Class <input id="class" value="VII"></label><label>Roll Number <input id="roll"></label>
+<button id="startBtn" class="primary">START EXAM</button>
+</section>
+<section id="exam" hidden>
+<div class="layout"><aside><div class="sideTitle">Questions</div><div id="nav"></div><button id="submitBtn" class="danger">SUBMIT EXAM</button></aside>
+<main class="card"><div class="meta"><span id="setLabel"></span><span id="progress"></span></div><div id="question"></div>
+<div class="actions"><button id="prev">Previous</button><button id="clear">Clear Answer</button><button id="review">Mark for Review</button><button id="next">Next</button></div></main></div>
+</section>
+<section id="result" class="card" hidden></section>
+</div>
+<script src="questions.js"></script><script src="script.js"></script></body></html>

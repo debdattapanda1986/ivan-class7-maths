@@ -5,7 +5,7 @@ document.querySelector('.sets button[data-set="A"]').classList.add('selected');
 $('startBtn').onclick=()=>{
  student={name:$('name').value.trim()||"Student",class:$('class').value.trim()||"VII",roll:$('roll').value.trim()||"-"};
  questions=questionSets[selectedSet].map((q,i)=>({...q,id:i+1}));
- answers={};marked={};idx=0;endTime=Date.now()+30*60*1000;
+ answers={};marked={};idx=0;endTime=Date.now()+60*60*1000;
  localStorage.setItem("mathCBT",JSON.stringify({selectedSet,questions,answers,marked,idx,endTime,student}));
  $('start').hidden=true;$('exam').hidden=false;$('setLabel').textContent="Set "+selectedSet+" • 60 Marks";buildNav();render();tick();timerId=setInterval(tick,500);
 };
